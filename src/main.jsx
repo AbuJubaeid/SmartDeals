@@ -4,10 +4,14 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import AuthProvider from './AuthContext/AuthProvider';
 import AllProducts from './components/AllProducts/AllProducts';
+import CreateProduct from './components/CreateProduct/CreateProduct';
 import Home from './components/Home/Home';
 import Login from './components/LogIn/Login';
+import MyBids from './components/MyBids/MyBids';
+import MyProducts from './components/MyProducts/MyProducts';
 import Register from './components/Register/Register';
 import './index.css';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 import RootLaayout from './RootLayout/RootLaayout';
 
 
@@ -31,7 +35,28 @@ const router = createBrowserRouter([
       {
         path: 'register',
         Component: Register
-      }
+      },
+      {
+        path: 'myProducts',
+        element: 
+        <PrivateRoute>
+          <MyProducts></MyProducts>
+        </PrivateRoute>
+      },
+      {
+        path: 'myBids',
+        element: 
+        <PrivateRoute>
+          <MyBids></MyBids>
+        </PrivateRoute>
+      },
+      {
+        path: 'createProduct',
+        element: 
+        <PrivateRoute>
+          <CreateProduct></CreateProduct>
+        </PrivateRoute>
+      },
     ]
   },
 ]);
