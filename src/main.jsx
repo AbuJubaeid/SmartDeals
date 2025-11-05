@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Login from './components/LogIn/Login';
 import MyBids from './components/MyBids/MyBids';
 import MyProducts from './components/MyProducts/MyProducts';
+// import ProductDetails from './components/ProductDetails/ProductDetails';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Register from './components/Register/Register';
 import './index.css';
